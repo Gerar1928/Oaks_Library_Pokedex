@@ -9,8 +9,8 @@ const pokemonData = (pokemonName, callback) => {
 
         axios.get(species).then(res => {
             const speciesData = res.data;
-
             const evolution = speciesData.evolution_chain.url;
+            
             axios.get(evolution).then(res => {
                 callback(undefined, mainData, speciesData, res.data);
             });
