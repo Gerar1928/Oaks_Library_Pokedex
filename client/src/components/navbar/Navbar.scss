@@ -1,0 +1,44 @@
+@import '../App.scss';
+
+#Navbar {
+    background-color: $primary-color;
+    color: #FFFFFF;
+    display: flex;
+    font-family: 'Arvo', serif;
+    grid-column: 1 / 10;
+    grid-row: 1 / 2;
+
+    #navbar-brand {
+        align-items: center;
+        display: flex;
+        flex: 70%;
+        height: 100%;
+
+        .brand {
+            padding: 10px;
+
+            h1 {
+                font-size: 36px;
+                margin: 0;
+            }
+        }
+    }
+
+    #navbar-items {
+        align-items: center;
+        display: flex;
+        flex: 30%;
+        justify-content: flex-end;
+
+        .navbar-item {
+            display: flex;
+            margin-right: 50px;
+
+            p {
+                font-size: 24px;
+                font-weight: bold;
+                margin: 0;
+            }
+        }
+    }
+}

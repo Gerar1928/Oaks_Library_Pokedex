@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Titillium+Web&display=swap');
+
+$font-stack: 'Titillium Web', sans-serif;
+$primary-color: #D62C1E;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #FFFFFF;
+    margin: 0;
+
+    #Container {
+    display: grid;
+    font-family: $font-stack;
+    gap: 20px;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(9, 1fr);
+    height: 1024px;
+    width: 1440px;
+    }
+}
