@@ -1,7 +1,10 @@
 const express = require('express');
-const app = express();
+const cors = require('cors');
 const pokemonData  = require('./utils/pokemon-data');
 const evolutionInfoSchema = require('./utils/schema/evolution-info-schema');
+
+const app = express();
+app.use(cors());
 
 app.get('/pokedex', (req, res) => {
     if (!req.query.pokemon) {
