@@ -1,10 +1,10 @@
-import './Navbar.scss'
+import './Navbar.scss';
 
 const Navbar = () => {
     return <div id='Navbar'>
         <div id='navbar-brand'>
             <div className='brand'>
-                <h1>Oak's Library</h1>
+                <h2>Oak's Library</h2>
             </div>
         </div>
         <div id='navbar-items'>

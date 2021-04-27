@@ -1,10 +1,21 @@
 import './App.scss';
-import Navbar from './navbar/Navbar';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Main from './main/Main';
+import General from './general/General';
 
 const App = () => {
-    return (<div id='Container'>
-        <Navbar />
-    </div>);
+    return (
+        <Router>
+            <Switch>
+                <Route path='/' exact>
+                    <Main />
+                </Route>
+                <Route path='/:pokemonName/general'>
+                    <General />
+                </Route>
+            </Switch>
+        </Router>
+    );
 };
 
 export default App;
