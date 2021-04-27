@@ -10,8 +10,8 @@ const General = () => {
     useEffect(() => {
         axios.get(`http://localhost:9000/pokedex?pokemon=${ pokemonName }`)
             .then(response => setPokemonInfo(response.data))
-            .catch(err => err.message);
-    });
+            .catch(err => console.log(err.message));
+    }, [pokemonName]);
 
     console.log(pokemonInfo);
 

@@ -1,0 +1,16 @@
+{
+    "short_name": "Oak's Library",
+    "name": "Oak's Library",
+    "description": "All the Pokémon data you would like to know is here.",
+    "icons": [
+      {
+        "src": "./images/Oak's-library-icon.png",
+        "sizes": "64x64 32x32 24x24 16x16",
+        "type": "image/x-icon"
+      }
+    ],
+    "start_url": ".",
+    "display": "fullscreen",
+    "theme_color": "#3A3A3A",
+    "background_color": "#ffffff"
+}

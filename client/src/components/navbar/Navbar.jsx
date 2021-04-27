@@ -8,13 +8,13 @@ const Navbar = () => {
             </div>
         </div>
         <div id='navbar-items'>
-            <div className="navbar-item">
+            <div className='navbar-item'>
                 <p>General</p>
             </div>
-            <div className="navbar-item">
+            <div className='navbar-item'>
                 <p>Moves</p>
             </div>
-            <div className="navbar-item">
+            <div className='navbar-item'>
                 <p>Location</p>
             </div>
         </div>
