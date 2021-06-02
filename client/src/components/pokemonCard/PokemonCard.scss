@@ -1,0 +1,76 @@
+@import '../App.scss';
+
+#pokemon_card {
+    background-color: $secondary-color;
+    display: grid;
+    grid-template-columns: 487px 304px;
+    grid-column: 1 / 6;
+    grid-row: 1 / 6;
+
+    #main-images {
+        display: grid;
+        grid-template-rows: 444px 116px;
+        grid-column: 1 / 2;
+
+        #card-image {
+            align-items: center;
+            display: grid;
+            grid-row: 1 / 2;
+            justify-items: center;
+            position: relative;
+
+            #pokemon-image {
+                position: absolute;
+                width: 339px;
+                z-index: 1;
+            }
+
+            img[alt="pokeball"] {
+                position: absolute;
+                width: 417px;
+                z-index: 0;
+            }
+        }
+
+        #types {
+            display: flex;
+            grid-row: 2 / 3;
+
+            .type {
+                align-items: center;
+                display: grid;
+                flex: 50%;
+                justify-items: center;
+
+                img {
+                    box-shadow: 0px 7px 5px 1px rgba(0,0,0,0.61);
+                }
+            }
+        }
+    }
+
+    #general-info {
+        background-color: $primary-color;
+        color: #FFFFFF;
+        display: grid;
+        font-family: $font-stack;
+        font-size: 24px;
+        font-weight: 600px;
+        grid-auto-rows: repeat(6, 1fr);
+        grid-column: 2 / 3;
+
+        .piece-of-info {
+            align-items: center;
+            display: flex;
+            padding: 10px;
+
+            p {
+                margin: 0;
+
+                span {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

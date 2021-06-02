@@ -1,17 +1,17 @@
 import './App.scss';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Search from './search/Search';
 import Main from './main/Main';
-import General from './general/General';
 
 const App = () => {
     return (
         <Router>
             <Switch>
                 <Route path='/' exact>
-                    <Main />
+                    <Search />
                 </Route>
                 <Route path='/:pokemonName/general'>
-                    <General />
+                    <Main />
                 </Route>
             </Switch>
         </Router>

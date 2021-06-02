@@ -1,0 +1,77 @@
+@import '../App.scss';
+
+%inputStyling {
+    border: none;
+    border-radius: 10px;
+    display: block;
+    font-family: $font-stack;
+    font-size: 20px;
+}
+
+#Container-Search {
+    background-color: #3A3A3A;
+    display: grid;
+    font-family: 'Arvo', serif;
+    gap: 15px;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(12, 42px);
+
+    #top-background {
+        align-items: center;
+        display: flex;
+        background-color: #D62C1E;
+        color: #ffffff;
+        flex-direction: column;
+        gap: 30px;
+        grid-column: 1 / 10;
+        grid-row: 1 / 6;
+        justify-content: center;
+
+        h1 {
+            font-size: 50px;
+            margin: 0;
+        }
+        
+        p {
+            margin: 0;
+        }
+    }
+
+    #center-background {
+        grid-column: 1 / 10;
+        grid-row: 6 / 8;
+
+        input[type='text'] {
+            @extend %inputStyling;
+            height: 45px;
+            margin: 0 auto 0 auto;
+            padding: 10px;
+            width: 40%;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        input[type='submit'] {
+            @extend %inputStyling;
+            background-color: #23689B;
+            color: #ffffff;
+            font-weight:600px;
+            height: 35px;
+            margin: 20px auto 0 auto;
+            padding: 0;
+            width: 10%;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    #bottom-background {
+        background-color: #ffffff;
+        grid-column: 1 / 10;
+        grid-row: 8 / 13;
+    }
+}

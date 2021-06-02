@@ -1,31 +1,23 @@
-import { useHistory } from 'react-router-dom';
-import './Main.scss';
+import { useState, useEffect } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
+import Navbar from '../navbar/Navbar';
+import General from '../general/General';
+import './Main.scss'
 
 const Main = () => {
+    const { pokemonName } = useParams();
+    const [pokemonInfo, setPokemonInfo] = useState(null);
 
-    const history = useHistory();
-
-    const handleOnSubmit = (e) => {
-        const pokemonName = e.target.pokemon.value;
-
-        e.preventDefault();
-
-        history.push(`/${pokemonName}/general`);
-        
-    }
+    useEffect(() => {
+        axios.get(`http://localhost:9000/pokedex?pokemon=${ pokemonName }`)
+            .then(response => setPokemonInfo(response.data))
+            .catch(err => console.log(err.message));
+    }, [pokemonName]);
 
     return (<div id='Container-Main'>
-        <div id='top-background'>
-            <h1>Oak's Library</h1>
-            <p>All the Pokémon data you would like to know is here.</p>
-        </div>
-        <div id='center-background'>
-            <form action='http://localhost:9000/pokedex' method='GET' onSubmit={ handleOnSubmit }>
-                <input type='text' name='pokemon' placeholder='Enter pokémon name.'/>
-                <input type='submit' value='Search'/>
-            </form>
-        </div>
-        <div id='bottom-background'></div>
+        <Navbar />
+        { pokemonInfo ? <General pokemonInfo = { pokemonInfo } /> : 'Loading...' }
     </div>);
 }
 

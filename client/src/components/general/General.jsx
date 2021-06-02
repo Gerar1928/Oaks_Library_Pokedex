@@ -1,23 +1,10 @@
-import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import axios from 'axios';
-import Navbar from '../navbar/Navbar';
+import PokemonCard from '../pokemonCard/PokemonCard';
 
-const General = () => {
-    const { pokemonName } = useParams();
-    const [pokemonInfo, setPokemonInfo] = useState(null);
-
-    useEffect(() => {
-        axios.get(`http://localhost:9000/pokedex?pokemon=${ pokemonName }`)
-            .then(response => setPokemonInfo(response.data))
-            .catch(err => console.log(err.message));
-    }, [pokemonName]);
-
-    console.log(pokemonInfo);
-
+const General = ({ pokemonInfo }) => {
     return (<div id='Container-General'>
-        <Navbar />
-    </div>)
-}
+        <PokemonCard generalInfo = { pokemonInfo.generalInfo.general }/>
+        </div>);
+};
+
 
 export default General;

@@ -1,9 +1,0 @@
-@import '../App.scss';
-
-#Container-General {
-    display: grid;
-    font-family: $font-stack;
-    gap: 20px;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(9, 1fr);
-}
