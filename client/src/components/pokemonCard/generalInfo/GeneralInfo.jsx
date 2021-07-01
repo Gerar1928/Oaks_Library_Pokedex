@@ -1,8 +1,6 @@
 import _ from 'lodash';
 
 const GeneralInfo = ({ generalInfo }) => {
-    console.log(generalInfo);
-
     return (<div  id='general-info'>
         <div className='piece-of-info'>
             <p>Name: {generalInfo.name}</p>

@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const _ = require('lodash');
 const pokemonData  = require('./utils/pokemon-data');
 const evolutionInfoSchema = require('./utils/schema/evolution-info-schema');
 
@@ -7,11 +8,14 @@ const app = express();
 app.use(cors());
 
 app.get('/pokedex', (req, res) => {
-    if (!req.query.pokemon) {
+
+    const pokemonName = _.kebabCase(req.query.pokemon);
+
+    if (!pokemonName) {
         return res.send({ error: 'Please insert a query string to fetch' });
     }
 
-    pokemonData(req.query.pokemon, async (err, { generalInfo, speciesInfo, evolutionEndPoint }) => {
+    pokemonData(pokemonName, async (err, { generalInfo, speciesInfo, evolutionEndPoint }) => {
         if (err !== undefined) {
             return res.send({ err });
         }

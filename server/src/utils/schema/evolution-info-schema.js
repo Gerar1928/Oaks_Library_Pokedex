@@ -19,7 +19,7 @@ const evolutionInfoSchema = async (url) => {
         return pokemonChain
     }).catch(err => console.log(err));
 
-    const pokemonImages = Promise.all(evolutionChanin.map(async (pokemon) => {
+    const pokemonLineImages = Promise.all(evolutionChanin.map(async (pokemon) => {
             const imageUrl = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon.species.name}/`)
                         .then(response => response.data.sprites.other['official-artwork'].front_default)
                         .catch(err => console.log(err));
@@ -28,7 +28,7 @@ const evolutionInfoSchema = async (url) => {
 
     const evolutionInfo = {
         evolution_chain: await evolutionChanin,
-        pokemon_images: await pokemonImages
+        pokemon_images: await pokemonLineImages
     }
     return evolutionInfo;
 }

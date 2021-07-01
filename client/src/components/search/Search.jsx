@@ -20,7 +20,7 @@ const Search = () => {
         </div>
         <div id='center-background'>
             <form action='http://localhost:9000/pokedex' method='GET' onSubmit={ handleOnSubmit }>
-                <input type='text' name='pokemon' placeholder='Enter pokémon name.' autocomplete='off'/>
+                <input type='text' name='pokemon' placeholder='Enter pokémon name.' autoComplete='off'/>
                 <input type='submit' value='Search'/>
             </form>
         </div>

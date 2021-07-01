@@ -6,7 +6,7 @@ import './PokemonCard.scss';
 const PokemonCard = ({ generalInfo }) => {
 
     const piecesOfGeneralInfo = {
-        name: _.capitalize(generalInfo.name),
+        name: _.upperFirst(generalInfo.name.replace(/-/g, ' ')),
         index: generalInfo.index,
         types: generalInfo.types.map(type => _.capitalize(type.type.name)), 
         height: `${ +generalInfo.height / 10 } m`,
