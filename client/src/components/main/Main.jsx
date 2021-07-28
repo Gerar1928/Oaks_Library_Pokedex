@@ -8,10 +8,11 @@ import './Main.scss'
 const Main = () => {
     const { pokemonName } = useParams();
     const [pokemonInfo, setPokemonInfo] = useState(null);
+    const [showErr, setShowErr] = useState(null);
 
     useEffect(() => {
         axios.get(`http://localhost:9000/pokedex?pokemon=${ pokemonName }`)
-            .then(response => setPokemonInfo(response.data))
+            .then(response => response.data.err ? setShowErr(response.data.err) : setPokemonInfo(response.data))
             .catch(err => console.log(err.message));
     }, [pokemonName]);
 

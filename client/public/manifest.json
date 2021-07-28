@@ -4,7 +4,7 @@
     "description": "All the Pokémon data you would like to know is here.",
     "icons": [
       {
-        "src": "./images/icons/Oak's-library-icon.png",
+        "src": "favicon.ico",
         "sizes": "64x64 32x32 24x24 16x16",
         "type": "image/x-icon"
       }

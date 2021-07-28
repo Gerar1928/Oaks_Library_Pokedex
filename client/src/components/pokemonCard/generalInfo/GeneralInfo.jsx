@@ -3,10 +3,10 @@ import _ from 'lodash';
 const GeneralInfo = ({ generalInfo }) => {
     return (<div  id='general-info'>
         <div className='piece-of-info'>
-            <p>Name: {generalInfo.name}</p>
+            <p>Name: <span>{generalInfo.name}</span></p>
         </div>
         <div className='piece-of-info'>
-            <p>Index: <span>{generalInfo.index}</span></p>
+            <p>National No. <span>{generalInfo.index}</span></p>
         </div>
         <div className='piece-of-info'>
             <p>Types: <span>{generalInfo.types.map((type => `${type} `))}</span></p>
