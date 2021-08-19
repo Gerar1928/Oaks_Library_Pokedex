@@ -21,7 +21,7 @@ const PokemonCard = ({ generalInfo }) => {
                 <img src={ `${ process.env.PUBLIC_URL }/images/pokeball-background.png` } alt='pokeball' />
             </div>
             <div id='types'>
-                {piecesOfGeneralInfo.types.map( (type, index) => <TypeIcon type={ type } key={ index } />)}
+                {piecesOfGeneralInfo.types.map( (type, index) => <TypeIcon type={ type.toLowerCase() } key={ index } />)}
             </div>
         </div>
         <GeneralInfo generalInfo={ piecesOfGeneralInfo } />

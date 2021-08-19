@@ -1,0 +1,10 @@
+@import '../App.scss';
+
+#general-body {
+    display: grid;
+    gap: 20px;
+    grid-column: 1 / 10;
+    grid-row: 2 / 10;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: repeat(8, 96px);
+}

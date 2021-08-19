@@ -9,7 +9,7 @@ app.use(cors());
 
 app.get('/pokedex', (req, res) => {
 
-    const pokemonName = _.kebabCase(req.query.pokemon);
+    const pokemonName = _.kebabCase(req.query.pokemon.trim());
 
     if (!pokemonName) {
         return res.send({ error: 'Please insert a query string to fetch' });

@@ -22,7 +22,7 @@ const pokemonData = (pokemonName, callback) => {
                 });
         });
     }).catch(err => {
-        callback('No pokemon found under this name. Please try another one.', undefined);
+        callback('No pokemon found under this name. Please try another one.', err);
     });
 }
 

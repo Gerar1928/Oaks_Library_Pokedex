@@ -1,7 +1,7 @@
 import './Navbar.scss';
 
 const Navbar = () => {
-    return <div id='Navbar'>
+    return <div id='navbar'>
         <div id='navbar-brand'>
             <div className='brand'>
                 <h1>Oak's Library</h1>

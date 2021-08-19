@@ -8,7 +8,7 @@
     font-size: 20px;
 }
 
-#Container-Search {
+#container-search {
     background-color: #3A3A3A;
     display: grid;
     font-family: 'Arvo', serif;
@@ -61,11 +61,16 @@
             height: 35px;
             margin: 20px auto 0 auto;
             padding: 0;
+            transform: scale(0);
             width: 10%;
 
             &:hover {
                 cursor: pointer;
             }
+        }
+
+        .active {
+            transform: scale(1) !important;
         }
     }
 
