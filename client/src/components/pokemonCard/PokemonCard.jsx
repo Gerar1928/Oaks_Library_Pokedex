@@ -1,13 +1,9 @@
-import { useContext } from 'react';
 import _ from 'lodash';
 import TypeIcon from './typeIcon/TypeIcon';
 import GeneralInfo from './generalInfo/GeneralInfo';
-import { GlobalContext } from '../main/Main';
 import './PokemonCard.scss';
 
-const PokemonCard = () => {
-
-    const { generalInfo } = useContext(GlobalContext);
+const PokemonCard = ({ generalInfo }) => {
 
     //Retrive information from generalInfo and mofidied in order to place it on the UI.
     const piecesOfGeneralInfo = {

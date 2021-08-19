@@ -24,7 +24,7 @@ const Main = () => {
     return (<div id='container-main'>
         <Navbar />
         <GlobalContext.Provider value={ pokemonInfo } >
-            <General pokemonInfo = { pokemonInfo } />
+            <General />
         </GlobalContext.Provider>
     </div>);
 }

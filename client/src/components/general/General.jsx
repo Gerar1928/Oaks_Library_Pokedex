@@ -1,7 +1,11 @@
+import { useContext } from 'react';
+import { GlobalContext } from '../main/Main';
 import GeneralBody from '../generalBody/GeneralBody';
 import './General.scss';
 
-const General = ({ pokemonInfo }) => {
+const General = () => {
+    const pokemonInfo = useContext(GlobalContext);
+
     return (<div id='container-general'>
         {pokemonInfo 
             ? <GeneralBody pokemonInfo={ pokemonInfo } /> 
