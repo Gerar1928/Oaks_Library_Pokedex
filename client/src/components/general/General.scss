@@ -4,10 +4,11 @@
     display: grid;
     font-family: $font-stack;
     gap: 20px;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(9, 96px);
-    height: 1024px;
-    width: 1440px;
+    grid-column: 1 / 10;
+    grid-row: 2 / 10;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(8, 96px);
+    padding: 0 5px 0 5px;
     
     #pokeball-loading-animation{
         animation: pokeball-animation 1s linear 0s infinite;

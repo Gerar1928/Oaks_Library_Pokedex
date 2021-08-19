@@ -5,7 +5,7 @@ import './GeneralBody.scss';
 const GeneralBody = ({ pokemonInfo }) => {
     return (
         <div id='general-body'>
-            <PokemonCard generalInfo={ pokemonInfo.generalInfo.general } />
+            <PokemonCard />
             <Evolution evolution={ pokemonInfo.evolutionInfo } />
         </div>
     );
