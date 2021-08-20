@@ -4,11 +4,11 @@ import './GeneralBody.scss';
 
 const GeneralBody = ({ pokemonInfo }) => {
 
-    const { generalInfo, speciesInfo, evolutionInfo } = pokemonInfo
+    const { generalInfo, speciesInfo, evolutionInfo } = pokemonInfo;
 
     return (
         <div id='general-body'>
-            <PokemonCard generalInfo={ generalInfo }/>
+            <PokemonCard generalInfo={ generalInfo.general }/>
             <Evolution evolutionInfo={ evolutionInfo }/>
         </div>
     );

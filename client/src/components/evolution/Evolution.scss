@@ -9,16 +9,52 @@
     grid-row: 6 / 9;
 
     div {
-        background-color: $primary-color;
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
+        grid-row: 1 / 2;
         padding-left: 10px;
         
         h2 {
-            color: #dddddd;
+            color: #ffffff;
             font-family: $font-stack;
             font-weight: 400px;
             margin: 0;
+            text-align: center;
+        }
+    }
+
+    #no-evolution {
+        align-items: center;
+        display: grid;
+        justify-content: center;
+        grid-row: 2 / 3;
+
+        .pokemon-name {
+            text-align: center;
+            
+            p {
+                margin: 0;
+            }
+
+            h2 {
+                text-align: center;
+            }
+        }
+
+        .pokemon-image {
+            position: relative;
+
+            .front-image {
+                position: absolute;
+                width: 125px;
+                z-index: 1;
+            }
+
+            .back-image {
+                position: absolute;
+                width: 128px;
+                z-index: 0;
+            }
         }
     }
 }

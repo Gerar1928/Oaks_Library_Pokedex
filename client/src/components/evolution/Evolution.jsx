@@ -1,4 +1,5 @@
 import './Evolution.scss';
+import NoEvolution from './evolution-lines/NoEvolution';
 
 const Evolution = ({ evolutionInfo }) => {
 
@@ -7,6 +8,7 @@ const Evolution = ({ evolutionInfo }) => {
         <div>
             <h2>Evolution</h2>
         </div>
+        <NoEvolution evolutionInfo={ evolutionInfo }/>
     </div>
 };
 
