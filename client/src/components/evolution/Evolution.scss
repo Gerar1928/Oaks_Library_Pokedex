@@ -12,7 +12,6 @@
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         grid-row: 1 / 2;
-        padding-left: 10px;
         
         h2 {
             color: #ffffff;
@@ -23,37 +22,70 @@
         }
     }
 
-    #no-evolution {
+    #unevolved {
         align-items: center;
         display: grid;
         justify-content: center;
         grid-row: 2 / 3;
 
-        .pokemon-name {
-            text-align: center;
-            
-            p {
-                margin: 0;
+        .pokemon-mini-card {
+            color: #ffffff;
+            border-radius: 10px;
+            display: grid;
+            height: 180px;
+            grid-template-columns: 1fr;
+            grid-template-rows: 103px repeat(3, 1fr);
+            width: 140px;
+
+            .pokemon-image {
+                display: grid;
+                grid-row: 1 / 2;
+                justify-items: center;
+                position: relative;
+    
+                .front-image {
+                    position: absolute;
+                    width: 100px;
+                    z-index: 1;
+                }
+    
+                .back-image {
+                    position: absolute;
+                    width: 103px;
+                    z-index: 0;
+                }
             }
 
-            h2 {
+            .stage {
+                grid-row: 2 / 3;
                 text-align: center;
-            }
-        }
 
-        .pokemon-image {
-            position: relative;
-
-            .front-image {
-                position: absolute;
-                width: 125px;
-                z-index: 1;
+                p {
+                    font-size: 15px;
+                    margin: 0;
+                }
             }
 
-            .back-image {
-                position: absolute;
-                width: 128px;
-                z-index: 0;
+            .pokemon-name {
+                grid-row: 3 / 4;
+                text-align: center;
+
+                p {
+                    font-size: 15px;
+                    font-weight: bold;
+                    margin: 0;
+                }
+            }
+
+            .types {
+                grid-row: 4 / 5;
+                text-align: center;
+
+                span {
+                    font-size: 13px;
+                    padding: 0 3px 0 3px;
+                    margin: 0 2px 0 2px;
+                }
             }
         }
     }

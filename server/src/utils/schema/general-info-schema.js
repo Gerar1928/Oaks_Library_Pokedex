@@ -32,7 +32,7 @@ const generalInfoSchema = response => {
                 defense: (Math.floor((((((response.data.stats[2].base_stat * 2) * 100) / 100) + 5) * 0.9))),
                 special_attack: (Math.floor((((((response.data.stats[3].base_stat * 2) * 100) / 100) + 5) * 0.9))),
                 special_defense: (Math.floor((((((response.data.stats[4].base_stat * 2) * 100) / 100) + 5) * 0.9))),
-                speed:(Math.floor((((((response.data.stats[5].base_stat * 2) * 100) / 100) + 5) * 0.9))),
+                speed: (Math.floor((((((response.data.stats[5].base_stat * 2) * 100) / 100) + 5) * 0.9))),
             }
         }
     }

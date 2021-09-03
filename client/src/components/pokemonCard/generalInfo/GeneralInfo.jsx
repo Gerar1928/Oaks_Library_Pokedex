@@ -3,22 +3,22 @@ import _ from 'lodash';
 const GeneralInfo = ({ generalInfo }) => {
     return (<div  id='general-info'>
         <div className='piece-of-info'>
-            <p>Name: <span>{generalInfo.name}</span></p>
+            <p>Name: <span>{ generalInfo.name }</span></p>
         </div>
         <div className='piece-of-info'>
-            <p>National No. <span>{generalInfo.index}</span></p>
+            <p>National No. <span>{ generalInfo.index }</span></p>
         </div>
         <div className='piece-of-info'>
-            <p>Types: <span>{generalInfo.types.map((type => `${type} `))}</span></p>
+            <p>Types: { generalInfo.types.map((type => <span className={ _.lowerCase(type) }>{ `${ type }` }</span>)) }</p>
         </div>
         <div className='piece-of-info'>
-            <p>Height: <span>{generalInfo.height}</span></p>
+            <p>Height: <span>{ generalInfo.height }</span></p>
         </div>
         <div className='piece-of-info'>
-            <p>Weight: <span>{generalInfo.weight}</span></p>
+            <p>Weight: <span>{ generalInfo.weight }</span></p>
         </div>
         <div className='piece-of-info'>
-            <p>Abilities: <span>{generalInfo.abilities.map(ability => ability.is_hidden ? `${_.capitalize(ability.ability.name)} (Hidden) ` : `${_.capitalize(ability.ability.name)}, ` )}</span></p>
+            <p>Abilities: <span>{ generalInfo.abilities.map(ability => ability.is_hidden ? `${ _.capitalize(ability.ability.name) } (Hidden) ` : `${ _.capitalize(ability.ability.name) }, ` ) }</span></p>
         </div>
     </div>);
 };
