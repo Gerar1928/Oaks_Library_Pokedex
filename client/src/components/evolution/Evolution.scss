@@ -119,4 +119,43 @@
             grid-column: 4 / 5;
         }
     }
+
+    #second-evolution {
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-row: 2 / 3;
+        justify-items: center;
+
+        .pokemon-mini-card {
+            @extend %pokemon-mini-card;
+        }
+
+        .evolution-trigger {
+            p {
+                text-align: center;
+                margin: 0;
+            }
+        }
+
+        .box-one {
+            grid-column: 1 / 2;
+        }
+
+        .box-two {
+            grid-column: 3 / 4;
+        }
+
+        .box-three {
+            grid-column: 5 / 6;
+        }
+
+        .box-four {
+            grid-column: 2 / 3;
+        }
+
+        .box-five {
+            grid-column: 4 / 5;
+        }
+    }
 }
