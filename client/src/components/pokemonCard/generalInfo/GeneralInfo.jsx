@@ -9,7 +9,7 @@ const GeneralInfo = ({ generalInfo }) => {
             <p>National No. <span>{ generalInfo.index }</span></p>
         </div>
         <div className='piece-of-info'>
-            <p>Types: { generalInfo.types.map((type => <span className={ _.lowerCase(type) }>{ `${ type }` }</span>)) }</p>
+            <p>Types: { generalInfo.types.map(((type, index) => <span key={ index } className={ _.lowerCase(type) }>{ `${ type }` }</span>)) }</p>
         </div>
         <div className='piece-of-info'>
             <p>Height: <span>{ generalInfo.height }</span></p>

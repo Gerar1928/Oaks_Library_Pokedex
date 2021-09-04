@@ -16,7 +16,7 @@ const Unevolved = ({ evolutionInfo }) => {
                 <p>{ _.upperFirst(evolution_chain[0].species.name.replace(/-/g, ' ')) }</p>
             </div>
             <div className="types">
-                { pokemon_types_and_images[0].types.map(type => <span className={type.type.name}>{ `${ _.upperFirst(type.type.name) }` }</span>) }
+                { pokemon_types_and_images[0].types.map((type, index) => <span key={ index } className={ type.type.name }>{ `${ _.upperFirst(type.type.name) }` }</span>) }
             </div>
         </div>
     </div>);

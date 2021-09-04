@@ -1,20 +1,80 @@
 @import '../App.scss';
 
+%pokemon-mini-card {
+    border-radius: 10px;
+    display: grid;
+    height: 180px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 103px repeat(3, 1fr);
+    width: 140px;
+
+    .pokemon-image {
+        display: grid;
+        grid-row: 1 / 2;
+        justify-items: center;
+        position: relative;
+        
+        .front-image {
+            position: absolute;
+            width: 100px;
+            z-index: 1;
+        }
+        
+        .back-image {
+            position: absolute;
+            width: 103px;
+            z-index: 0;
+        }
+    }
+
+    .stage {
+        grid-row: 2 / 3;
+        text-align: center;
+    
+        p {
+            font-size: 15px;
+            margin: 0;
+        }
+    }
+
+    .pokemon-name {
+        grid-row: 3 / 4;
+        text-align: center;
+        
+        p {
+            font-size: 15px;
+            font-weight: bold;
+            margin: 0;
+        }
+    }
+
+    .types {
+        grid-row: 4 / 5;
+        text-align: center;
+    
+        span {
+            font-size: 13px;
+            padding: 0 3px 0 3px;
+            margin: 0 2px 0 2px;
+        }
+    }
+}
+
 #evolution-container {
     background-color: $secondary-color;
     border-radius: 15px;
+    color: #ffffff;
     display: grid;
     grid-template-rows: 36px 292px;
     grid-column: 1 / 6;
     grid-row: 6 / 9;
 
-    div {
+    .evolution-container-header-box {
         border-top-left-radius: 15px;
         border-top-right-radius: 15px;
         grid-row: 1 / 2;
         
-        h2 {
-            color: #ffffff;
+        .evolution-container-header {
             font-family: $font-stack;
             font-weight: 400px;
             margin: 0;
@@ -29,64 +89,34 @@
         grid-row: 2 / 3;
 
         .pokemon-mini-card {
-            color: #ffffff;
-            border-radius: 10px;
-            display: grid;
-            height: 180px;
-            grid-template-columns: 1fr;
-            grid-template-rows: 103px repeat(3, 1fr);
-            width: 140px;
+            @extend %pokemon-mini-card;
+        }
+    }
 
-            .pokemon-image {
-                display: grid;
-                grid-row: 1 / 2;
-                justify-items: center;
-                position: relative;
-    
-                .front-image {
-                    position: absolute;
-                    width: 100px;
-                    z-index: 1;
-                }
-    
-                .back-image {
-                    position: absolute;
-                    width: 103px;
-                    z-index: 0;
-                }
-            }
+    #firts-evolution {
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-row: 2 / 3;
+        justify-items: center;
 
-            .stage {
-                grid-row: 2 / 3;
+        .pokemon-mini-card {
+            @extend %pokemon-mini-card;
+        }
+
+        .evolution-trigger {
+            p {
                 text-align: center;
-
-                p {
-                    font-size: 15px;
-                    margin: 0;
-                }
+                margin: 0;
             }
+        }
 
-            .pokemon-name {
-                grid-row: 3 / 4;
-                text-align: center;
+        .box-one {
+            grid-column: 2 / 3;
+        }
 
-                p {
-                    font-size: 15px;
-                    font-weight: bold;
-                    margin: 0;
-                }
-            }
-
-            .types {
-                grid-row: 4 / 5;
-                text-align: center;
-
-                span {
-                    font-size: 13px;
-                    padding: 0 3px 0 3px;
-                    margin: 0 2px 0 2px;
-                }
-            }
+        .box-two {
+            grid-column: 4 / 5;
         }
     }
 }
